@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>Name</td>
+                </tr>
+                </thead>
+
+                <tbody>
+                {# @var product \App\Entity\Product #}
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product.name }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+{% endblock %}

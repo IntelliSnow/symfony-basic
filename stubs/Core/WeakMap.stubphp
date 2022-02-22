@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @template TKey of object
+ * @template TValue
+ *
+ * @implements \ArrayAccess<TKey, TValue>
+ * @implements \IteratorAggregate<TKey, TValue>
+ */
+final class WeakMap implements \ArrayAccess, \Countable, \IteratorAggregate
+{
+    public function getIterator(): iterable;
+}

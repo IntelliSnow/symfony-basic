@@ -1,3 +1,26 @@
+# Quick start
+
+``make build``
+
+``make up``
+
+``make sh``
+
+to enter PHP image
+
+---
+
+Use ``./bin/console d:s:u --force`` for DB, no need for migrations. Ask for any questions.
+
+
+
+---
+
+#### Original readme below:
+
+---
+
+
 # Symfony Docker
 
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="1"
+    findUnusedPsalmSuppress="true"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+
+    <forbiddenFunctions>
+        <function name="dd"/>
+        <function name="dump"/>
+    </forbiddenFunctions>
+
+
+    <projectFiles>
+        <directory name="src" />
+        <ignoreFiles>
+            <directory name="vendor" />
+            <file name="src/Kernel.php"/>
+        </ignoreFiles>
+    </projectFiles>
+
+    <stubs>
+        <file name="stubs/Core/AbstractController.stubphp"/>
+        <file name="stubs/ServiceLocator.php"/>
+        <file name="stubs/Security/Core/Authentication/Token/TokenInterface/Voter.php"/>
+        <file name="stubs/Security/Core/Authentication/Token/TokenInterface/VoterInterface.php"/>
+        <file name="stubs/Security/Core/Authentication/Token/TokenInterface/TokenInterface.php"/>
+        <file name="stubs/Psr/Container/ContainerInterface.php"/>
+        <file name="stubs/Doctrine/ORM/EntityRepository.stubphp"/>
+        <file name="stubs/Doctrine/ORM/ObjectRepository.stubphp"/>
+        <file name="stubs/Doctrine/ORM/ServiceEntityRepository.stubphp"/>
+        <file name="stubs/Symfony/Contracts/Cache/CacheInterface.stubphp"/>
+        <file name="stubs/Symfony/Contracts/Cache/TagAwareCacheInterface.stubphp"/>
+    </stubs>
+
+    <plugins>
+        <pluginClass class="Psalm\SymfonyPsalmPlugin\Plugin"/>
+    </plugins>
+</psalm>
