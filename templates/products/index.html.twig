@@ -8,6 +8,9 @@
                 <thead>
                 <tr>
                     <td>Name</td>
+                    <td>
+                        <a href="#">Create</a>
+                    </td>
                 </tr>
                 </thead>
 
@@ -16,6 +19,8 @@
                 {% for product in products %}
                     <tr>
                         <td>{{ product.name }}</td>
+
+                        <td>Update</td>
                     </tr>
                 {% endfor %}
                 </tbody>
